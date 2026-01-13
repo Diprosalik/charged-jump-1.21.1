@@ -1,4 +1,4 @@
-<img src="src/main/resources/assets/charge-jump/charged_jump.png" style="display: block; margin-left: auto; margin-right: auto; height: 400px">
+<img src="src/main/resources/assets/charge-jump/charged_jump.png" alt="Charged Jump Image" style="display: block; margin-left: auto; margin-right: auto; height: 400px">
 
 # **Ever wanted to jump wider after sprinting? Now It's possible!**
 
