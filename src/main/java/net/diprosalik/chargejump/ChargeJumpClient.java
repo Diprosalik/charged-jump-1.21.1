@@ -21,6 +21,8 @@ public class ChargeJumpClient implements ClientModInitializer {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (client.player == null) return;
 
+            Configs.load();
+
             PlayerEntity player = client.player;
 
             boolean onGround = player.isOnGround();
@@ -37,7 +39,7 @@ public class ChargeJumpClient implements ClientModInitializer {
                     && player.isSprinting()) {
 
                 readyForLongJump(player);
-                if (player.age % 2 == 0) {
+                if (player.age % 2 == 0 && Configs.chargingEffects) {
                     spawnSprintParticles(player);
                 }
             }
@@ -60,7 +62,7 @@ public class ChargeJumpClient implements ClientModInitializer {
     private void applyLongJump(PlayerEntity player) {
         Vec3d lookVec = player.getRotationVector();
 
-        double boostStrength = 0.35; // ca. 1 Block extra
+        double boostStrength = 0.35;
 
         player.addVelocity(
                 lookVec.x * boostStrength,
