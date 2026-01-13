@@ -36,7 +36,7 @@ public class ChargeJumpClient implements ClientModInitializer {
                     && sprintingTime > COOLDOWN
                     && player.isSprinting()) {
 
-                readyForLongJump(player, SPEED);
+                readyForLongJump(player);
                 if (player.age % 2 == 0) {
                     spawnSprintParticles(player);
                 }
@@ -49,10 +49,9 @@ public class ChargeJumpClient implements ClientModInitializer {
                     && player.isSprinting()) {
 
                 applyLongJump(player);
-                readyForLongJump(player, 0.1);
             }
 
-            if (!onGround) sprintingTime = 0;
+            if (!(player.fallDistance < 2) || jumpPressed) sprintingTime = 0;
 
             wasOnGround = onGround;
         });
@@ -70,9 +69,9 @@ public class ChargeJumpClient implements ClientModInitializer {
         );
     }
 
-    private void readyForLongJump(PlayerEntity player, double SPEED) {
+    private void readyForLongJump(PlayerEntity player) {
         Objects.requireNonNull(player.getAttributeInstance(EntityAttributes.GENERIC_MOVEMENT_SPEED))
-                .setBaseValue(SPEED);
+                .setBaseValue(ChargeJumpClient.SPEED);
     }
 
     private static void spawnSprintParticles(PlayerEntity player) {
