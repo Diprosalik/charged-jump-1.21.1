@@ -1,0 +1,5 @@
+{
+  "text.autoconfig.chargejump.title": "ChargeJump Config",
+  "text.autoconfig.chargejump.option.chargingEffects": "Enable Effects",
+  "text.autoconfig.chargejump.option.chargingEffects.@Tooltip": "Should particles spawn while the jump is charging?"
+}

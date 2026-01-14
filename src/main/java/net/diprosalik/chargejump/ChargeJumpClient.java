@@ -18,10 +18,10 @@ public class ChargeJumpClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        Configs.init();
+
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (client.player == null) return;
-
-            Configs.load();
 
             PlayerEntity player = client.player;
 
@@ -39,7 +39,7 @@ public class ChargeJumpClient implements ClientModInitializer {
                     && player.isSprinting()) {
 
                 readyForLongJump(player);
-                if (player.age % 2 == 0 && Configs.chargingEffects) {
+                if (player.age % 2 == 0 && Configs.INSTANCE.chargingEffects) {
                     spawnSprintParticles(player);
                 }
             }

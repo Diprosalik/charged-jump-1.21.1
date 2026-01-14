@@ -22,6 +22,9 @@
 		],
 		"client": [
 			"net.diprosalik.chargejump.ChargeJumpClient"
+		],
+		"modmenu": [
+			"net.diprosalik.chargejump.compat.ModMenuIntegration"
 		]
 	},
 	"mixins": [
