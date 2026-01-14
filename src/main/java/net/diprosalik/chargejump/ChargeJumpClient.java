@@ -8,10 +8,12 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.math.Vec3d;
 
+import java.util.Objects;
+
 public class ChargeJumpClient implements ClientModInitializer {
     private boolean wasOnGround = false;
     private int sprintingTime = 0;
-    private double boostStrength = 0.35;
+    private static final double boostStrength = 0.35;
     private static final double BASE_SPEED = 0.11;
 
     @Override
@@ -42,7 +44,7 @@ public class ChargeJumpClient implements ClientModInitializer {
         }
 
         if (!onGround && isCharged(config) && wasOnGround && jumpPressed && player.isSprinting()) {
-            executeLongJump(player, boostStrength);
+            executeLongJump(player);
         }
 
         if (player.fallDistance >= 2 || jumpPressed) {
@@ -57,12 +59,12 @@ public class ChargeJumpClient implements ClientModInitializer {
     }
 
     private void prepareJump(PlayerEntity player) {
-        player.getAttributeInstance(EntityAttributes.GENERIC_MOVEMENT_SPEED).setBaseValue(BASE_SPEED);
+        Objects.requireNonNull(player.getAttributeInstance(EntityAttributes.GENERIC_MOVEMENT_SPEED)).setBaseValue(BASE_SPEED);
     }
 
-    private void executeLongJump(PlayerEntity player, double strength) {
+    private void executeLongJump(PlayerEntity player) {
         Vec3d look = player.getRotationVector();
-        player.addVelocity(look.x * strength, 0, look.z * strength);
+        player.addVelocity(look.x * ChargeJumpClient.boostStrength, 0, look.z * ChargeJumpClient.boostStrength);
     }
 
     private void spawnParticles(PlayerEntity player) {
