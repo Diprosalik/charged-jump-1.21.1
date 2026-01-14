@@ -1,9 +1,9 @@
-package net.diprosalik.chargejump.compat;
+package net.diprosalik.chargedjump.compat;
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
 import me.shedaniel.autoconfig.AutoConfig;
-import net.diprosalik.chargejump.config.ModConfig;
+import net.diprosalik.chargedjump.config.ModConfig;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 

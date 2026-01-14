@@ -1,8 +1,8 @@
 {
 	"schemaVersion": 1,
-	"id": "charge-jump",
+	"id": "charged-jump",
 	"version": "${version}",
-	"name": "Charge Jump",
+	"name": "Charged-Jump",
 	"description": "This simple mod lets you jump farther the longer you sprint. That easy!",
 	"authors": [
 		"Diprosalik"
@@ -11,24 +11,24 @@
 		"sources": "https://github.com/Diprosalik/charge-jump-1.21.1.git"
 	},
 	"license": "MIT",
-	"icon": "assets/charge-jump/icon.png",
+	"icon": "assets/charged-jump/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.diprosalik.chargejump.ChargeJump"
+			"net.diprosalik.chargedjump.ChargedJump"
 		],
 		"fabric-datagen": [
-			"net.diprosalik.chargejump.ChargeJumpDataGenerator"
+			"net.diprosalik.chargedjump.ChargedJumpDataGenerator"
 		],
 		"client": [
-			"net.diprosalik.chargejump.ChargeJumpClient"
+			"net.diprosalik.chargedjump.ChargedJumpClient"
 		],
 		"modmenu": [
-			"net.diprosalik.chargejump.compat.ModMenuIntegration"
+			"net.diprosalik.chargedjump.compat.ModMenuIntegration"
 		]
 	},
 	"mixins": [
-		"charge-jump.mixins.json"
+		"charged-jump.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.18.4",

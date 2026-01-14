@@ -1,8 +1,8 @@
-package net.diprosalik.chargejump;
+package net.diprosalik.chargedjump;
 
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
-import net.diprosalik.chargejump.config.ModConfig;
+import net.diprosalik.chargedjump.config.ModConfig;
 
 public class Configs {
     public static ModConfig INSTANCE;

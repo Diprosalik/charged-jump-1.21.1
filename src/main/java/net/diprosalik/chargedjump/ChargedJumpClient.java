@@ -1,6 +1,6 @@
-package net.diprosalik.chargejump;
+package net.diprosalik.chargedjump;
 
-import net.diprosalik.chargejump.config.ModConfig;
+import net.diprosalik.chargedjump.config.ModConfig;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -10,7 +10,7 @@ import net.minecraft.util.math.Vec3d;
 
 import java.util.Objects;
 
-public class ChargeJumpClient implements ClientModInitializer {
+public class ChargedJumpClient implements ClientModInitializer {
     private boolean wasOnGround = false;
     private int sprintingTime = 0;
     private static final double boostStrength = 0.35;
@@ -64,7 +64,7 @@ public class ChargeJumpClient implements ClientModInitializer {
 
     private void executeLongJump(PlayerEntity player) {
         Vec3d look = player.getRotationVector();
-        player.addVelocity(look.x * ChargeJumpClient.boostStrength, 0, look.z * ChargeJumpClient.boostStrength);
+        player.addVelocity(look.x * ChargedJumpClient.boostStrength, 0, look.z * ChargedJumpClient.boostStrength);
     }
 
     private void spawnParticles(PlayerEntity player) {

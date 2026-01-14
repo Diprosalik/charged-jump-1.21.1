@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "net.diprosalik.chargejump.mixin",
+	"package": "net.diprosalik.chargedjump.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
 		"ExampleMixin"

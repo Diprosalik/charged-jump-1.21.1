@@ -1,4 +1,4 @@
-package net.diprosalik.chargejump.mixin;
+package net.diprosalik.chargedjump.mixin;
 
 import net.minecraft.server.MinecraftServer;
 import org.spongepowered.asm.mixin.Mixin;

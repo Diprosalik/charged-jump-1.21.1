@@ -1,0 +1,9 @@
+{
+  "text.autoconfig.chargedjump.title": "ChargeJump Config",
+
+  "text.autoconfig.chargedjump.option.chargingEffects": "Enable Effects",
+  "text.autoconfig.chargedjump.option.chargingEffects.@Tooltip": "Should particles spawn while the jump is charging?",
+
+  "text.autoconfig.chargedjump.option.cooldownTicks": "Charge Time (Ticks)",
+  "text.autoconfig.chargedjump.option.cooldownTicks.@Tooltip": "How many ticks (20 ticks = 1 second) you need to sprint before the jump is ready."
+}
