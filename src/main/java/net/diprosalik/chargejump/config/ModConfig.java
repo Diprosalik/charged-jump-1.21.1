@@ -7,9 +7,10 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 @Config(name = "chargejump")
 public class ModConfig implements ConfigData {
 
-    @ConfigEntry.Gui.Tooltip // Aktiviert den Tooltip
+    @ConfigEntry.Gui.Tooltip
     public boolean chargingEffects = true;
 
-//    @ConfigEntry.Gui.Tooltip
-//    public double boostStrength = 0.35;
+    @ConfigEntry.Gui.Tooltip
+    @ConfigEntry.BoundedDiscrete(min = 10, max = 60)
+    public int cooldownTicks = 20;
 }

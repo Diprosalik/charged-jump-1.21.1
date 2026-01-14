@@ -12,7 +12,6 @@ public class ModMenuIntegration implements ModMenuApi {
 
     @Override
     public ConfigScreenFactory<?> getModConfigScreenFactory() {
-        // Erzeugt automatisch das Cloth Config GUI basierend auf deiner ModConfig Klasse
         return parent -> AutoConfig.getConfigScreen(ModConfig.class, parent).get();
 
     }
