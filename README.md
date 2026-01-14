@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://cdn.modrinth.com/data/cached_images/8a1259f7a28a21a40d57d5be0c00715c9b1cf50e_0.webp" alt="Charge Jump Banner" width="600">
 
-  # ⚡ Charge Jump
+  # ⚡ Charged Jump
   ### *Master the rhythm of sprinting to unleash powerful leaps!*
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
