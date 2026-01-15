@@ -47,7 +47,7 @@ public class ChargedJumpClient implements ClientModInitializer {
             executeLongJump(player);
         }
 
-        if (player.fallDistance >= 2 || jumpPressed) {
+        if (player.fallDistance >= 2 || jumpPressed || player.getVelocity().horizontalLength() < 0.1) {
             sprintingTime = 0;
         }
 
@@ -76,4 +76,5 @@ public class ChargedJumpClient implements ClientModInitializer {
                 0, 0, 0
         );
     }
+
 }
