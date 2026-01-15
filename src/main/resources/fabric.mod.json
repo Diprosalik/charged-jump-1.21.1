@@ -11,7 +11,7 @@
 		"sources": "https://github.com/Diprosalik/charge-jump-1.21.1.git"
 	},
 	"license": "MIT",
-	"icon": "assets/charged-jump/icon.png",
+	"icon": "assets/chargedjump/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [

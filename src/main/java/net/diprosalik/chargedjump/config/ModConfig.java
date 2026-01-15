@@ -21,4 +21,10 @@ public class ModConfig implements ConfigData {
     public double getChargingSpeed() {
         return chargingSpeedScaled / 100.0;
     }
+
+    @ConfigEntry.Gui.Tooltip
+    public boolean enableVignette = false;
+
+    @ConfigEntry.Gui.Tooltip
+    public boolean looseHungerOnJump = true;
 }

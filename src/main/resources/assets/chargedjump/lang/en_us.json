@@ -1,0 +1,18 @@
+{
+  "text.autoconfig.chargedjump.title": "Charged-Jump Config",
+
+  "text.autoconfig.chargedjump.option.chargingEffects": "Enable Effects",
+  "text.autoconfig.chargedjump.option.chargingEffects.@Tooltip": "Should particles spawn while the jump is charging?",
+
+  "text.autoconfig.chargedjump.option.cooldownTicks": "Charge Time (Ticks)",
+  "text.autoconfig.chargedjump.option.cooldownTicks.@Tooltip": "How many ticks (20 ticks = 1 second) you need to sprint before the jump is ready.",
+
+  "text.autoconfig.chargedjump.option.chargingSpeedScaled": "Running Speed",
+  "text.autoconfig.chargedjump.option.chargingSpeedScaled.@Tooltip": "How fast you will run while charging the jump.",
+
+  "text.autoconfig.chargedjump.option.enableVignette": "Enable Vignette",
+  "text.autoconfig.chargedjump.option.enableVignette.@Tooltip": "Should there be a vignette when the jump is charging?",
+
+  "text.autoconfig.chargedjump.option.looseHungerOnJump": "Loose hunger when jumping",
+  "text.autoconfig.chargedjump.option.looseHungerOnJump.@Tooltip": "Whether you should loose hunger when you do a charged jump or not."
+}
