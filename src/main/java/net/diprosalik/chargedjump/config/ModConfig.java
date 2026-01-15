@@ -13,4 +13,12 @@ public class ModConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     @ConfigEntry.BoundedDiscrete(min = 10, max = 60)
     public int cooldownTicks = 20;
+
+    @ConfigEntry.Gui.Tooltip
+    @ConfigEntry.BoundedDiscrete(min = 10, max = 20)
+    public int chargingSpeedScaled = 11;
+
+    public double getChargingSpeed() {
+        return chargingSpeedScaled / 100.0;
+    }
 }

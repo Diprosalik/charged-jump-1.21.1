@@ -13,8 +13,9 @@ import java.util.Objects;
 public class ChargedJumpClient implements ClientModInitializer {
     private boolean wasOnGround = false;
     private int sprintingTime = 0;
+    private static double baseSpeed;
     private static final double boostStrength = 0.35;
-    private static final double BASE_SPEED = 0.11;
+
 
     @Override
     public void onInitializeClient() {
@@ -29,6 +30,7 @@ public class ChargedJumpClient implements ClientModInitializer {
     private void handleTick(PlayerEntity player, boolean jumpPressed) {
         boolean onGround = player.isOnGround();
         ModConfig config = Configs.INSTANCE;
+        baseSpeed = config.getChargingSpeed();
 
         if (player.isSprinting()) {
             sprintingTime++;
@@ -59,7 +61,7 @@ public class ChargedJumpClient implements ClientModInitializer {
     }
 
     private void prepareJump(PlayerEntity player) {
-        Objects.requireNonNull(player.getAttributeInstance(EntityAttributes.GENERIC_MOVEMENT_SPEED)).setBaseValue(BASE_SPEED);
+        Objects.requireNonNull(player.getAttributeInstance(EntityAttributes.GENERIC_MOVEMENT_SPEED)).setBaseValue(baseSpeed);
     }
 
     private void executeLongJump(PlayerEntity player) {
