@@ -1,7 +1,6 @@
 <div align="center">
   <img src="https://cdn.modrinth.com/data/cached_images/8a1259f7a28a21a40d57d5be0c00715c9b1cf50e_0.webp" alt="Charge Jump Banner" width="600">
 
-  # ⚡ Charged Jump
   ### *Master the rhythm of sprinting to unleash powerful leaps!*
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -26,7 +25,7 @@
 
 Run for more than 1 second to gain extra Speed and you will be followed by some charging particles
 
-Gets canceled after falling more than 2 Blocks
+Gets canceled after falling more than one Block
 
 ![gain speed](https://cdn.modrinth.com/data/cached_images/23cf5244ced235e15be2c11439cc7654a90852d0.gif)
 
