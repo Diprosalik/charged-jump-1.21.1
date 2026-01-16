@@ -12,11 +12,9 @@ public class Textures {
         MinecraftClient client = MinecraftClient.getInstance();
         if (client.player == null) return;
 
-        ModConfig config = Configs.INSTANCE;
+        float alpha = chargedJumpClient.getVignetteAlpha();
 
-        // Jetzt nutzt die Methode die echten Daten aus der Hauptklasse
-        if (client.player.isOnGround() && chargedJumpClient.isCharged(config) && config.enableVignette) {
-
+        if (alpha > 0) {
             int width = client.getWindow().getScaledWidth();
             int height = client.getWindow().getScaledHeight();
 
@@ -27,7 +25,9 @@ public class Textures {
 
             float pulse = 0.45f + (float) Math.sin((client.player.age + tickDelta) * 0.15f) * 0.15f;
 
-            RenderSystem.setShaderColor(1.0f, 0.5f, 0.0f, pulse);
+            float finalAlpha = pulse * alpha;
+
+            RenderSystem.setShaderColor(1.0f, 0.5f, 0.0f, finalAlpha);
 
             drawContext.drawTexture(VIGNETTE_TEXTURE, 0, 0, 0, 0, width, height, width, height);
 

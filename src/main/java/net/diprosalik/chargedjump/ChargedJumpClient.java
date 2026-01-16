@@ -23,6 +23,8 @@ public class ChargedJumpClient implements ClientModInitializer {
     private static double baseSpeed;
     private static final double boostStrength = 0.35;
     Textures textures = new Textures();
+    private float vignetteAlpha = 0.0f;
+    private final float fadeSpeed = 0.05f;
 
 
     @Override
@@ -36,7 +38,6 @@ public class ChargedJumpClient implements ClientModInitializer {
         });
 
         HudRenderCallback.EVENT.register((drawContext, tickDelta) -> {
-            // Wir übergeben 'this' (die aktuelle Instanz dieser Klasse)
             textures.renderOrangeVignette(drawContext, tickDelta.getTickDelta(true), this);
         });
     }
@@ -67,7 +68,17 @@ public class ChargedJumpClient implements ClientModInitializer {
             sprintingTime = 0;
         }
 
+        if (player.isOnGround() && isCharged(config) && config.enableVignette) {
+            vignetteAlpha = Math.min(1.0f, vignetteAlpha + fadeSpeed);
+        } else {
+            vignetteAlpha = Math.max(0.0f, vignetteAlpha - fadeSpeed);
+        }
+
         wasOnGround = onGround;
+    }
+
+    public float getVignetteAlpha() {
+        return vignetteAlpha;
     }
 
     boolean isCharged(ModConfig config) {
