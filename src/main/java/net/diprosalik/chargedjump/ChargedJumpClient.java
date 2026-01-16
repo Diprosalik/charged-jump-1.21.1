@@ -24,7 +24,6 @@ public class ChargedJumpClient implements ClientModInitializer {
     private static final double boostStrength = 0.35;
     Textures textures = new Textures();
     private float vignetteAlpha = 0.0f;
-    private final float fadeSpeed = 0.05f;
 
 
     @Override
@@ -37,9 +36,7 @@ public class ChargedJumpClient implements ClientModInitializer {
             handleTick(client.player, client.options.jumpKey.isPressed());
         });
 
-        HudRenderCallback.EVENT.register((drawContext, tickDelta) -> {
-            textures.renderOrangeVignette(drawContext, tickDelta.getTickDelta(true), this);
-        });
+        HudRenderCallback.EVENT.register((drawContext, tickDelta) -> textures.renderOrangeVignette(drawContext, tickDelta.getTickDelta(true), this));
     }
 
     private void handleTick(PlayerEntity player, boolean jumpPressed) {
@@ -68,6 +65,7 @@ public class ChargedJumpClient implements ClientModInitializer {
             sprintingTime = 0;
         }
 
+        float fadeSpeed = 0.05f;
         if (player.isOnGround() && isCharged(config) && config.enableVignette) {
             vignetteAlpha = Math.min(1.0f, vignetteAlpha + fadeSpeed);
         } else {

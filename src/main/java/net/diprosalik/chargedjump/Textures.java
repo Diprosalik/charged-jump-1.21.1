@@ -1,7 +1,6 @@
 package net.diprosalik.chargedjump;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-import net.diprosalik.chargedjump.config.ModConfig;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.util.Identifier;
