@@ -1,5 +1,6 @@
 package net.diprosalik.chargedjump;
 
+import me.shedaniel.autoconfig.AutoConfig;
 import net.diprosalik.chargedjump.config.ModConfig;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
@@ -116,13 +117,38 @@ public class ChargedJumpClient implements ClientModInitializer {
     }
 
     private void spawnParticles(PlayerEntity player) {
-        player.getWorld().addParticle(
-                ParticleTypes.TRIAL_SPAWNER_DETECTION,
-                player.getX() + (player.getWorld().random.nextDouble() - 0.5),
-                player.getY() + 0.1,
-                player.getZ() + (player.getWorld().random.nextDouble() - 0.5),
-                0, 0, 0
-        );
+        ModConfig config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();
+
+        switch (config.particleType1){
+            case TRIAL_SPAWNER_DETECTION -> {
+                player.getWorld().addParticle(
+                        ParticleTypes.TRIAL_SPAWNER_DETECTION,
+                        player.getX() + (player.getWorld().random.nextDouble() - 0.5),
+                        player.getY() + 0.1,
+                        player.getZ() + (player.getWorld().random.nextDouble() - 0.5),
+                        0, 0, 0
+                );
+            }
+            case CLOUD -> {
+                player.getWorld().addParticle(
+                        ParticleTypes.CLOUD,
+                        player.getX() + (player.getWorld().random.nextDouble() - 0.5),
+                        player.getY() + 0.1,
+                        player.getZ() + (player.getWorld().random.nextDouble() - 0.5),
+                        0, 0, 0
+                );
+            }
+            case SMALL_GUST -> {
+                player.getWorld().addParticle(
+                        ParticleTypes.SMALL_GUST,
+                        player.getX() + (player.getWorld().random.nextDouble() - 0.5),
+                        player.getY() + 0.1,
+                        player.getZ() + (player.getWorld().random.nextDouble() - 0.5),
+                        0, 0, 0
+                );
+            }
+        }
+
     }
 
     private boolean isPlayerOnBlock(PlayerEntity player, World world, Block block) {

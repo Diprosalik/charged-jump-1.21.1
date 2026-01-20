@@ -14,5 +14,12 @@
   "text.autoconfig.chargedjump.option.enableVignette.@Tooltip": "Should there be a vignette when the jump is charging?",
 
   "text.autoconfig.chargedjump.option.looseHungerOnJump": "Loose hunger when jumping",
-  "text.autoconfig.chargedjump.option.looseHungerOnJump.@Tooltip": "Whether you should loose hunger when you do a charged jump or not."
+  "text.autoconfig.chargedjump.option.looseHungerOnJump.@Tooltip": "Whether you should loose hunger when you do a charged jump or not.",
+
+  "text.autoconfig.chargedjump.option.particleType1": "Particle Effect",
+  "text.autoconfig.chargedjump.option.particleType1.@Tooltip": "Select the main particle effect for the jump.",
+
+  "text.autoconfig.chargedjump.option.particleType1.TRIAL_SPAWNER_DETECTION": "Trial Spawner",
+  "text.autoconfig.chargedjump.option.particleType1.CLOUD": "Cloud",
+  "text.autoconfig.chargedjump.option.particleType1.SMALL_GUST": "Small Gust"
 }
