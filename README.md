@@ -23,7 +23,7 @@
 
 
 
-Run for more than 1 second to gain extra Speed and you will be followed by some charging particles
+Run for more than 1 second to gain extra Speed and you will be followed by some charging particles and if wanted a vignette shows up
 
 Gets canceled after falling more than one Block
 
@@ -46,13 +46,18 @@ After a charged jump you have to charge your jump again
 | 🏃 Sprinting | 4 Blocks |
 | ⚡ **Charged Jump** | **~6 Blocks** |
 
+> Don't try to get on ice cause it's very slippery there!
+
 
 <br>
 
 ## **Configuration**
 Thanks to **Cloth Config**, this mod is **fully customizable**! You can adjust the following settings:
-* **Particle Effects:** Toggle the charging particles on or off.
-* **Charge Time:** Change how long you need to sprint until the jump is ready.
+* **Particle Effects:** Toggle the charging particles on or off or change them
+* **Charge Time:** Change how long you need to sprint until the jump is ready
+* **Running Speed:** Change how fast you are running while charging your jump
+* **Vignette:** Toggle the vignette on or off
+* **Losse Hunger when jumping:** (May not work correctly in this version yet)
 
 > **Recommendation:** Install **ModMenu** to access these settings directly in-game via the mod list!
 
@@ -67,14 +72,14 @@ To ensure the mod works correctly, the following are required:
 
 ## **Planned Features**
 
-- More **configurations** for the Mod
-- **Enchantement** for the ability to charge jump
+- **Enchantements** modifying the charged jump
+- Be able to **burst out** left/right
 
 <br>
 
 ---
 <div align="center">
-  <sub>Version 1.0.1-alpha.</sub>
+  <sub>Version 1.0.2-alpha.</sub>
   <br>
   ⚠️ Note: This is an Alpha version. Please report any bugs via the Issue Tracker!
 </div>
